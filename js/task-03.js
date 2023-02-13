@@ -23,6 +23,7 @@ const makeImages = images => {
     imgEl.src = image.url;
     imgEl.alt = image.alt;
     imgEl.width = 400;
+    imgEl.height = 225;
     liEl.classList.add(`flex`)
   
     return liEl
