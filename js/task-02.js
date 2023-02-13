@@ -7,26 +7,19 @@ const ingredients = [
   'Condiments',
 ];
 
-const makeIngredients = ingredients => {
-  return ingredients.map(ingredient => {
-    const liEl = document.createElement(`li`)
+const makeIngredients = (ingredients) => {
+  return ingredients.map((ingredient) => {
+    const liEl = document.createElement(`li`);
     liEl.textContent = ingredient;
-    liEl.classList.add(`item`)
-  
-    return liEl
+    liEl.classList.add(`item`);
+
+    return liEl;
   });
 };
 
-const ulEl = document.querySelector(`#ingredients`)
-const elements = makeIngredients(ingredients)
-  ulEl.append(...elements)
-
-
-
-
-
-
-
+const ulEl = document.querySelector(`#ingredients`);
+const elements = makeIngredients(ingredients);
+ulEl.append(...elements);
 
 //LONG METHOD
 
@@ -63,8 +56,6 @@ const elements = makeIngredients(ingredients)
 // const ulEl = document.querySelector(`#ingredients`)
 // ulEl.append(liEl1,liEl2,liEl3,liEl4,liEl5,liEl6)
 
-
-
 // OLD SCHOOL
 
 // const elements = []
@@ -75,7 +66,6 @@ const elements = makeIngredients(ingredients)
 //   elements.push(liEl)
 // }
 // console.log(elements)
-
 
 // const ulEl = document.querySelector(`#ingredients`)
 //  ulEl.append(...elements)

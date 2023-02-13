@@ -13,10 +13,8 @@ const images = [
   },
 ];
 
-
-const makeImages = images => {
-  return images.map(image => {
-    
+const makeImages = (images) => {
+  return images.map((image) => {
     const imgEl = document.createElement(`img`);
     const liEl = document.createElement(`li`);
     liEl.appendChild(imgEl);
@@ -24,12 +22,10 @@ const makeImages = images => {
     imgEl.alt = image.alt;
     imgEl.width = 400;
     imgEl.height = 225;
-    return liEl
+    return liEl;
   });
 };
 
-
-
-const ulEl = document.querySelector(`.gallery`)
-const elements = makeImages(images)
-  ulEl.append(...elements)
+const ulEl = document.querySelector(`.gallery`);
+const elements = makeImages(images);
+ulEl.append(...elements);
