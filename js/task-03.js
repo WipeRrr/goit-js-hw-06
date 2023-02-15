@@ -13,19 +13,12 @@ const images = [
   },
 ];
 
-const makeImages = (images) => {
-  return images.map((image) => {
-    const imgEl = document.createElement(`img`);
-    const liEl = document.createElement(`li`);
-    liEl.appendChild(imgEl);
-    imgEl.src = image.url;
-    imgEl.alt = image.alt;
-    imgEl.width = 400;
-    imgEl.height = 225;
-    return liEl;
-  });
-};
+const imagesEl = images
+  .map(
+    (image) =>
+      `<img src="${image.url}" alt="${image.alt}" width="400" height="225"> `,
+  )
+  .join('');
 
 const ulEl = document.querySelector(`.gallery`);
-const elements = makeImages(images);
-ulEl.append(...elements);
+ulEl.insertAdjacentHTML('beforeend', imagesEl);
